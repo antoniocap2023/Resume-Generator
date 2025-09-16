@@ -17,7 +17,7 @@
 
 
 
-## Table of Contents
+### Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -34,9 +34,11 @@
 - [License](#license)
 
 
-## Overview
+
+### Overview
 
 The **Resume Generator** is a full-stack web application designed for the University of Michigan Information Technology Services (ITS) to automate the generation of resumes and cover letters for testing purposes. Built with **Django Ninja** (backend) and **React** (frontend), this tool streamlines the creation of multiple resume variations based on job requirements and customizable templates.
+
 
 ### Why This Tool Exists
 
@@ -44,7 +46,6 @@ The **Resume Generator** is a full-stack web application designed for the Univer
 - **Efficiency**: Batch process resume and cover letter generation
 - **Consistency**: Ensure standardized formatting across all generated documents
 - **Flexibility**: Support multiple templates and customizable generation orders
-
 
 
 ## Features
@@ -91,6 +92,8 @@ graph TD
     end
 ```
 
+
+
 ## Technology Stack
 
 - **Frontend**: React 18+, Vite, Tailwind CSS
@@ -98,6 +101,7 @@ graph TD
 - **AI Integration**: OpenAI GPT API
 - **File Processing**: Python built-in libraries
 - **Deployment**: Docker (optional), Node.js, Python
+
 
 
 ## Prerequisites
@@ -108,6 +112,7 @@ Before setting up the project, ensure you have the following installed:
 - **Node.js v16+** (for the React frontend)
 - **npm** (comes with Node.js)
 - **Git** (for version control)
+
 
 
 ## Installation
@@ -164,12 +169,15 @@ npm run dev
 The application will be available at http://localhost:5173/ (check terminal output for exact port).
 
 
+
 ### Basic Workflow
 
 1. **Upload Files**: Upload your three required `.txt` files
 2. **Configure Settings**: Choose template and generation order preferences
 3. **Generate**: Click generate to process your files
 4. **Download**: Receive a ZIP file with all generated resumes and cover letters
+
+
 
 ## File Format Requirements
 
@@ -185,6 +193,7 @@ Each file must use double newlines (\n\n) as section delimiters. All three files
 
 **Example Format**
 
+```txt
 Section 1 content here
 [blank line]
 [blank line]
@@ -192,9 +201,10 @@ Section 2 content here
 [blank line]
 [blank line]
 Section 3 content here
+```
 
 **Sample Job Requirements File**
-
+```txt
 Software Engineer position requiring Python, Django, and React experience. Must have 3+ years of web development experience.
 
 
@@ -202,6 +212,8 @@ Data Analyst role focusing on SQL, Python, and data visualization. Experience wi
 
 
 Product Manager position requiring agile methodology experience and cross-functional team leadership skills.
+```
+
 
 
 ## API Documentation 
@@ -224,6 +236,7 @@ Content-Type: application/json
     "order": "resume_first",
     "randomize": false
 }
+# Generate the actual Resumes and Cover Letters
 ```
 
 ```http
@@ -232,35 +245,34 @@ GET /api/download/{job_id}
 ```
 
 
+
 ## FAQ
 
-### General Usage
-
-**Q: How many resumes can I generate at once?
+**Q**: How many resumes can I generate at once?
 A: The number of resumes generated equals the number of sections in your input files. If each file has 5 sections, you'll get 5 resumes and 5 cover letters.
 
-**Q: What file formats are supported for input?
+**Q**: What file formats are supported for input?
 A: Only .txt files are supported. Ensure your files use UTF-8 encoding for best results.
 
-**Q: Can I preview the resumes before downloading?
+**Q**: Can I preview the resumes before downloading?
 A: Currently, the system generates all documents and provides them as a ZIP download. Preview functionality is planned for future releases.
 
 ## Technical Issues
 
-**Q: Why am I getting a "sections mismatch" error?
+**Q**: Why am I getting a "sections mismatch" error?
 A: This occurs when your three input files don't have the same number of sections. Ensure all files use the double-newline delimiter consistently.
 
-**Q: The generation process seems slow. Is this normal?
+**Q**: The generation process seems slow. Is this normal?
 A: Yes, AI-powered generation can take 30-60 seconds depending on the number of sections and OpenAI API response times.
 
-**Q: Can I use this tool offline?
+**Q**: Can I use this tool offline?
 A: No, the tool requires an internet connection to access the OpenAI API for content generation.
 File Formatting
 
-**Q: What's the maximum file size supported?
+**Q**: What's the maximum file size supported?
 A: Input files should be under 10MB each. Larger files may cause processing delays or timeouts.
 
-**Q: Can I include special characters in my input files?
+**Q**: Can I include special characters in my input files?
 A: Yes, but ensure your files use UTF-8 encoding to prevent character encoding issues.
 
 
@@ -300,8 +312,10 @@ Verify your OpenAI API key and credits
 Ensure all prerequisites are properly installed
 
 
+
 ## Contributing
 This project was developed for University of Michigan ITS testing workflows. For contribution guidelines or feature requests, please contact the ITS development team.
+
 
 
 ## Development Setup
@@ -316,9 +330,11 @@ python manage.py test
 cd frontend && npm test
 ```
 
+
 ## License
 
 This project is licensed under the MIT License. See LICENSE file for details.
+
 
 ## Acknowledgments 
 
