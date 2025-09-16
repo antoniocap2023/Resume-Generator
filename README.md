@@ -160,6 +160,10 @@ ALLOWED_HOSTS=localhost,127.0.0.1
 
 ## Usage - Starting the application
 
+![Workflow Demo](./resume_gen_1.mov.gif)
+*Alt text: Complete workflow demonstration showing file upload, configuration selection, resume generation process, and ZIP file download*
+
+
 ```bash
 # Start the frontend development server
 cd frontend
@@ -180,6 +184,9 @@ The application will be available at http://localhost:5173/ (check terminal outp
 
 
 ## File Format Requirements
+
+![File Format Demo](./resume_gen_2.mov.gif)
+*Alt text: Example text file showing proper double-newline delimiter formatting between sections*
 
 **CRITICAL: File Formatting Rules**
 You must upload exactly three .txt files:
