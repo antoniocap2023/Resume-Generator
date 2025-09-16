@@ -342,6 +342,16 @@ cd frontend && npm test
 ```
 
 
+## Sample Output
+
+The Resume Generator produces professional, formatted documents. Here's an example:
+
+[📄 Sample Generated Resume](./generated_resume.pdf)  
+
+These samples demonstrate the formatting and structure of documents created by the tool for University of Michigan ITS testing workflows.
+
+
+
 ## License
 
 This project is licensed under the MIT License. See LICENSE file for details.
