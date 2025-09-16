@@ -5,7 +5,6 @@
 <p align="center">
   <img src="./download.png" alt="Resume Generator banner with University of Michigan ITS branding and project title">
 </p>
-*Alt text: Resume Generator banner with University of Michigan ITS branding and project title*
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/your-username/Resume_Generator_API)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/your-username/Resume_Generator_API)
