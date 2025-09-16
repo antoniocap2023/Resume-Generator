@@ -49,15 +49,14 @@ The **Resume Generator** is a full-stack web application designed for the Univer
 
 ## Features
 
-**Batch Resume Generation**: Create multiple resumes and cover letters simultaneously  
-
-**ZIP File Export**: Download all generated documents in a single archive  
-**Multiple Templates**: Choose from various professional resume templates  
-**Customizable Order**: Generate resumes before cover letters or vice versa  
-**Random Generation**: Automatically randomize templates and generation order  
-**Structured Input**: Support for organized text file inputs with clear formatting  
-**OpenAI Integration**: Leverage AI for intelligent content generation  
-**Real-time Processing**: Fast generation with live progress updates  
+- **Batch Resume Generation**: Create multiple resumes and cover letters simultaneously 
+- **ZIP File Export**: Download all generated documents in a single archive  
+- **Multiple Templates**: Choose from various professional resume templates  
+- **Customizable Order**: Generate resumes before cover letters or vice versa  
+- **Random Generation**: Automatically randomize templates and generation order  
+- **Structured Input**: Support for organized text file inputs with clear formatting  
+- **OpenAI Integration**: Leverage AI for intelligent content generation  
+- **Real-time Processing**: Fast generation with live progress updates  
 
 
 ## Architecture
@@ -92,7 +91,7 @@ graph TD
     end
 ```
 
-## Tech Stack
+## Technology Stack
 
 - **Frontend**: React 18+, Vite, Tailwind CSS
 - **Backend**: Django 4.2+, Django Ninja REST Framework
@@ -140,6 +139,7 @@ touch .env
 
 Add the following environment variables to your .env file: 
 
+```env
 # OpenAI Configuration
 MODEL=gpt-3.5-turbo
 OPENAI_API_BASE=https://api.openai.com/v1
@@ -151,7 +151,7 @@ API_VERSION=2023-12-01
 DEBUG=True
 SECRET_KEY=your_secret_key_here
 ALLOWED_HOSTS=localhost,127.0.0.1
-
+```
 
 ## Usage - Starting the application
 
@@ -164,13 +164,12 @@ npm run dev
 The application will be available at http://localhost:5173/ (check terminal output for exact port).
 
 
-## Basic Workflow
+### Basic Workflow
 
-- **Upload Files:** Upload your three required .txt files
-- **Configure Settings:** Choose template and generation order preferences
-- **Generate:** Click generate to process your files
-- **Download:** Receive a ZIP file with all generated resumes and cover letters
-
+1. **Upload Files**: Upload your three required `.txt` files
+2. **Configure Settings**: Choose template and generation order preferences
+3. **Generate**: Click generate to process your files
+4. **Download**: Receive a ZIP file with all generated resumes and cover letters
 
 ## File Format Requirements
 
@@ -209,14 +208,14 @@ Product Manager position requiring agile methodology experience and cross-functi
 
 **Core Endpoints**
 
---
+```http
 POST /api/upload-files/
 Content-Type: multipart/form-data
 
 # Upload the three required text files
---
+```
 
---
+```http
 POST /api/generate-resumes/
 Content-Type: application/json
 
@@ -225,34 +224,43 @@ Content-Type: application/json
     "order": "resume_first",
     "randomize": false
 }
---
+```
 
---
+```http
 GET /api/download/{job_id}
 # Download generated ZIP file
---
+```
 
 
 ## FAQ
 
-**General Usage**
-Q: How many resumes can I generate at once?
+### General Usage
+
+**Q: How many resumes can I generate at once?
 A: The number of resumes generated equals the number of sections in your input files. If each file has 5 sections, you'll get 5 resumes and 5 cover letters.
-Q: What file formats are supported for input?
+
+**Q: What file formats are supported for input?
 A: Only .txt files are supported. Ensure your files use UTF-8 encoding for best results.
-Q: Can I preview the resumes before downloading?
+
+**Q: Can I preview the resumes before downloading?
 A: Currently, the system generates all documents and provides them as a ZIP download. Preview functionality is planned for future releases.
-Technical Issues
-Q: Why am I getting a "sections mismatch" error?
+
+## Technical Issues
+
+**Q: Why am I getting a "sections mismatch" error?
 A: This occurs when your three input files don't have the same number of sections. Ensure all files use the double-newline delimiter consistently.
-Q: The generation process seems slow. Is this normal?
+
+**Q: The generation process seems slow. Is this normal?
 A: Yes, AI-powered generation can take 30-60 seconds depending on the number of sections and OpenAI API response times.
-Q: Can I use this tool offline?
+
+**Q: Can I use this tool offline?
 A: No, the tool requires an internet connection to access the OpenAI API for content generation.
 File Formatting
-Q: What's the maximum file size supported?
+
+**Q: What's the maximum file size supported?
 A: Input files should be under 10MB each. Larger files may cause processing delays or timeouts.
-Q: Can I include special characters in my input files?
+
+**Q: Can I include special characters in my input files?
 A: Yes, but ensure your files use UTF-8 encoding to prevent character encoding issues.
 
 
