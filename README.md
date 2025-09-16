@@ -17,7 +17,7 @@
 
 
 
-### Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -35,12 +35,12 @@
 
 
 
-### Overview
+## Overview
 
 The **Resume Generator** is a full-stack web application designed for the University of Michigan Information Technology Services (ITS) to automate the generation of resumes and cover letters for testing purposes. Built with **Django Ninja** (backend) and **React** (frontend), this tool streamlines the creation of multiple resume variations based on job requirements and customizable templates.
 
 
-### Why This Tool Exists
+## Why This Tool Exists
 
 - **Automated Testing**: Generate multiple resume variations for ITS testing workflows
 - **Efficiency**: Batch process resume and cover letter generation
@@ -170,7 +170,7 @@ The application will be available at http://localhost:5173/ (check terminal outp
 
 
 
-### Basic Workflow
+## Basic Workflow
 
 1. **Upload Files**: Upload your three required `.txt` files
 2. **Configure Settings**: Choose template and generation order preferences
@@ -188,7 +188,7 @@ You must upload exactly three .txt files:
 - **Resume Instructions** Upload your resume instructions file
 - **Cover Letter Instructions** Upload your cover letter instructions file
 
-**Formatting Srtucture**
+**Formatting Structure**
 Each file must use double newlines (\n\n) as section delimiters. All three files must have the same number of sections.
 
 **Example Format**
@@ -248,6 +248,8 @@ GET /api/download/{job_id}
 
 ## FAQ
 
+### General Usage 
+
 **Q**: How many resumes can I generate at once?
 A: The number of resumes generated equals the number of sections in your input files. If each file has 5 sections, you'll get 5 resumes and 5 cover letters.
 
@@ -257,7 +259,7 @@ A: Only .txt files are supported. Ensure your files use UTF-8 encoding for best 
 **Q**: Can I preview the resumes before downloading?
 A: Currently, the system generates all documents and provides them as a ZIP download. Preview functionality is planned for future releases.
 
-## Technical Issues
+### Technical Issues
 
 **Q**: Why am I getting a "sections mismatch" error?
 A: This occurs when your three input files don't have the same number of sections. Ensure all files use the double-newline delimiter consistently.
@@ -268,6 +270,8 @@ A: Yes, AI-powered generation can take 30-60 seconds depending on the number of 
 **Q**: Can I use this tool offline?
 A: No, the tool requires an internet connection to access the OpenAI API for content generation.
 File Formatting
+
+### File Formatting
 
 **Q**: What's the maximum file size supported?
 A: Input files should be under 10MB each. Larger files may cause processing delays or timeouts.
@@ -293,23 +297,23 @@ npm install
 
 **Environment Variable Issues**
 
-Ensure your .env file is in the backend directory
-Check that your OpenAI API key is valid and has sufficient credits
-Verify all required environment variables are set
+- Ensure your `.env` file is in the `backend` directory
+- Check that your OpenAI API key is valid and has sufficient credits  
+- Verify all required environment variables are set
 
 **File Upload Errors**
 
-Confirm all three files are .txt format
-Check that files use double-newline delimiters
-Ensure all files have the same number of sections
+- Confirm all three files are .txt format
+- Check that files use double-newline delimiters
+- Ensure all files have the same number of sections
 
 **Getting Help**
 If you encounter issues not covered here:
 
-Check the browser console for error messages
-Review the backend logs in your terminal
-Verify your OpenAI API key and credits
-Ensure all prerequisites are properly installed
+- Check the browser console for error messages
+- Review the backend logs in your terminal
+- Verify your OpenAI API key and credits
+- Ensure all prerequisites are properly installed
 
 
 
@@ -344,9 +348,10 @@ This project is licensed under the MIT License. See LICENSE file for details.
 - **Frontend powered by React and Vite**
 
 <div align="center">
-⬆ Back to Top
-Made with love for University of Michigan ITS
+
+**[⬆ Back to Top](#resume-generator)**
+
+Made with ❤️ for University of Michigan ITS
+
 </div>
-
-
 
