@@ -3,6 +3,7 @@
 <div align="center">
 
 ![Resume Generator Banner](./resume_generator.pdf)
+*Alt text: Resume Generator banner with University of Michigan ITS branding and project title*
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/your-username/Resume_Generator_API)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/your-username/Resume_Generator_API)
@@ -276,7 +277,6 @@ A: Yes, AI-powered generation can take 30-60 seconds depending on the number of 
 
 **Q**: Can I use this tool offline?
 A: No, the tool requires an internet connection to access the OpenAI API for content generation.
-File Formatting
 
 ### File Formatting
 
