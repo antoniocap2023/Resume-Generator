@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Resume Generator Banner](https://via.placeholder.com/800x200/2E86AB/FFFFFF?text=Resume+Generator+%7C+University+of+Michigan+ITS)
+![Resume Generator Banner](./resume-generator.pdf)
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/your-username/Resume_Generator_API)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/your-username/Resume_Generator_API)
